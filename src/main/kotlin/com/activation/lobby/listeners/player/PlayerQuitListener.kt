@@ -1,0 +1,12 @@
+package com.activation.lobby.listeners.player
+
+import org.bukkit.event.EventHandler
+import org.bukkit.event.Listener
+import org.bukkit.event.player.PlayerQuitEvent
+
+class PlayerQuitListener: Listener {
+    @EventHandler
+    fun on(event: PlayerQuitEvent) {
+        event.quitMessage(null)
+    }
+}

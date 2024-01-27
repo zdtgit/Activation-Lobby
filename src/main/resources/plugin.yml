@@ -1,0 +1,18 @@
+main: "com.activation.lobby.ActivationLobby"
+name: "Activation-Lobby"
+version: "1.0"
+api-version: "1.20"
+
+libraries:
+  - "io.github.monun:invfx-core:3.3.2"
+  - "org.jetbrains.kotlin:kotlin-stdlib:1.9.21"
+
+commands:
+  spawn:
+    aliases:
+      - "스폰"
+    usage: "/<command>"
+
+depend:
+  - "LuckPerms"
+  - "PlaceholderAPI"
