@@ -1,6 +1,8 @@
 package com.activation.lobby.listeners.player
 
+import com.activation.lobby.events.player.PlayerPressurePlateEvent
 import com.activation.lobby.extensions.player.openServerMenu
+import org.bukkit.Bukkit
 import org.bukkit.Material
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
@@ -14,7 +16,11 @@ class PlayerInteractListener: Listener {
         val action = event.action
         val type = event.item?.type ?: return
 
-        if (action == Action.RIGHT_CLICK_AIR || action == Action.RIGHT_CLICK_BLOCK) {
+        if (action == Action.PHYSICAL && event.clickedBlock != null) {
+            val e = PlayerPressurePlateEvent(player, event.clickedBlock!!.type)
+
+            Bukkit.getPluginManager().callEvent(e)
+        } else if (action == Action.RIGHT_CLICK_AIR || action == Action.RIGHT_CLICK_BLOCK) {
             if (type == Material.NETHER_STAR) {
                 player.openServerMenu()
             }
