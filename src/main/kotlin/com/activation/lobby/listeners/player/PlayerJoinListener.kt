@@ -3,7 +3,6 @@ package com.activation.lobby.listeners.player
 import com.activation.lobby.extensions.itemstack.displayName
 import com.activation.lobby.extensions.player.spawn
 import com.activation.lobby.extensions.string.legacy
-import com.activation.lobby.extensions.string.mini
 import me.clip.placeholderapi.PlaceholderAPI
 import org.bukkit.Material
 import org.bukkit.event.EventHandler
