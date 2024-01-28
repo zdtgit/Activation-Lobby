@@ -2,10 +2,10 @@ package com.activation.lobby.events.player
 
 import org.bukkit.Material
 import org.bukkit.entity.Player
+import org.bukkit.event.Event
 import org.bukkit.event.HandlerList
-import org.bukkit.event.player.PlayerEvent
 
-class PlayerPressurePlateEvent(val player: Player, val type: Material): PlayerEvent(player) {
+class PlayerPressurePlateEvent(val player: Player, val type: Material): Event() {
     override fun getHandlers(): HandlerList {
         return handlers
     }
