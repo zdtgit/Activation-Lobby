@@ -12,6 +12,9 @@ class ActivationLobby: JavaPlugin() {
         ListenerManager.init()
     }
 
+    override fun onDisable() {
+    }
+
     companion object {
         val instance: ActivationLobby
             get() = getPlugin(ActivationLobby::class.java)
